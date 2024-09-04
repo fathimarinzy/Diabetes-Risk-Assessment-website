@@ -1,0 +1,228 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+<style>
+table, th, td {
+  border: 1px solid black;
+}
+</style>
+</head>
+<body>
+
+<h2>Table With Border</h2>
+
+<p>Use the CSS border property to add a border to the table.</p>
+
+<table style="width:100%">
+  <tr>
+    <th>Pregnancies</th>
+    <th>Glucose</th>
+    <th>Bloodpressure</th> 
+    <th>Skinthickness</th>
+    <th>Insulin</th>
+    <th>Bmi</th>
+    <th>Diabetesperdigreefunction</th>
+    <th>Age</th>
+  </tr>
+
+  {% for i in a %}
+  <tr>
+    <td>{{i.Pregnancies}}</td>
+    <td>{{i.Glucose}}</td>
+    <td>{{i.Bloodpressure}}</td>
+    <td>{{i.Skinthickness}}</td>
+    <td>{{i.Insulin}}</td>
+    <td>{{i.Bmi}}</td>
+    <td>{{i.Diabetespedigreefunction}}</td>
+    <td>{{i.Age}}</td>
+      
+    <td><a href="inforemove/{{i.id}}/">Delete</a></td>
+  </tr>
+  {% endfor %}
+</table>
+
+
+</body>
+</html> -->
+<!-- <!DOCTYPE html>
+<html>
+<head>
+<style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  padding: 8px;
+}
+th {
+  background-color: #f2f2f2;
+}
+</style>
+</head>
+<body>
+
+<h2>Table With Border</h2>
+
+<p>Use the CSS border property to add a border to the table.</p>
+
+<table style="width:100%">
+  <tr>
+    <th>Pregnancies</th>
+    <th>Glucose</th>
+    <th>Bloodpressure</th> 
+    <th>Skinthickness</th>
+    <th>Insulin</th>
+    <th>Bmi</th>
+    <th>Diabetespedigreefunction</th> 
+    <th>Age</th>
+    <th>Delete</th>
+  </tr>
+
+  {% for item in a %}
+  <tr>
+    <td>{{ item.Pregnancies }}</td>
+    <td>{{ item.Glucose }}</td>
+    <td>{{ item.Bloodpressure }}</td>
+    <td>{{ item.Skinthickness }}</td>
+    <td>{{ item.Insulin }}</td>
+    <td>{{ item.Bmi }}</td>
+    <td>{{ item.Diabetespredigreefunction}}</td>
+    <td>{{ item.Age }}</td>
+    <td><a href="inforemove/{{ item.id }}/">Delete</a></td>
+  </tr>
+  {% endfor %}
+</table>
+
+
+</body>
+</html> -->
+<!-- <!DOCTYPE html>
+<html>
+<head>
+  <style>
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 20px; /* Add some spacing below the table */
+    }
+    th, td {
+      border: 1px solid black;
+      padding: 8px;
+      text-align: left; /* Align text to the left within cells */
+    }
+    th {
+      background-color: #f2f2f2;
+    }
+    td a {
+      text-decoration: none; /* Remove underline from delete links */
+      color: red; /* Change link color to red */
+    }
+    td a:hover {
+      text-decoration: underline; /* Underline link on hover */
+    }
+  </style>
+</head>
+<body>
+
+<h2>Table With Border</h2>
+
+<p>Use the CSS border property to add a border to the table.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Pregnancies</th>
+      <th>Glucose</th>
+      <th>Bloodpressure</th> 
+      <th>Skinthickness</th>
+      <th>Insulin</th>
+      <th>Bmi</th>
+      <th>Diabetespedigreefunction</th> 
+      <th>Age</th>
+      <th>Delete</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for item in a %}
+    <tr>
+      <td>{{ item.Pregnancies }}</td>
+      <td>{{ item.Glucose }}</td>
+      <td>{{ item.Bloodpressure }}</td>
+      <td>{{ item.Skinthickness}}</td>
+       <td>{{ Insulin}}</td>
+        <td>{{ Bmi}}</td>
+        <td>{{ Diabetespedigreefunction}}</td>
+        <td>{{ Age}}</td>
+      <td><a href="inforemove/{{ item.id }}">Delete</a></td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+</body>
+</html> -->
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 20px; /* Add some spacing below the table */
+    }
+    th, td {
+      border: 1px solid black;
+      padding: 10px; /* Increase padding for better spacing */
+      text-align: left; /* Align text to the left within cells */
+    }
+    th {
+      background-color: #f2f2f2;
+      font-weight: bold; /* Make header text bold */
+    }
+    td a {
+      text-decoration: none; /* Remove underline from delete links */
+      color: red; /* Change link color to red */
+    }
+    td a:hover {
+      text-decoration: underline; /* Underline link on hover */
+    }
+  </style>
+</head>
+<body>
+
+<h2>Table With Border</h2>
+
+<p>Use the CSS border property to add a border to the table.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Pregnancies</th>
+      <th>Glucose</th>
+      <th>Bloodpressure</th> 
+      <th>Skinthickness</th>
+      <th>Insulin</th>
+      <th>Bmi</th>
+      <th>Diabetespedigreefunction</th> 
+      <th>Age</th>
+      <th>Delete</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for item in a %}
+    <tr>
+      <td>{{ item.Pregnancies }}</td>
+      <td>{{ item.Glucose }}</td>
+      <td>{{ item.Bloodpressure }}</td>
+      <td>{{ item.Skinthickness }}</td>
+      <td>{{ item.Insulin }}</td>
+      <td>{{ item.Bmi }}</td>
+      <td>{{ item.Diabetespedigreefunction }}</td>
+      <td>{{ item.Age }}</td>
+      <td><a href="inforemove/{{ item.id }}">Delete</a></td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+</body>
+</html>

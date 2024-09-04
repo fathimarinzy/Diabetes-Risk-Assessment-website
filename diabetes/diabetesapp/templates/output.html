@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Predicted Diseases</title>
+  <style>
+     body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #E0F4FF;
+        }
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        h1 {
+            font-size: 24px;
+            color: #a94442;;
+            text-align: center;
+        }
+        p {
+            font-size: 16px;
+            color: #333;
+            line-height: 1.5;
+        }
+        strong {
+            font-weight: bold;
+          
+            
+          
+        }
+        .alert {
+            margin-bottom: 20px;
+            padding: 10px;
+            background-color: #f2dede;
+            border: 1px solid #ebccd1;
+            color: #a94442;
+            border-radius: 5px;
+        }
+        .success {
+            margin-bottom: 20px;
+            padding: 10px;
+            background-color: #dff0d8;
+            border: 1px solid #d6e9c6;
+            color: #3c763d;
+            border-radius: 5px;
+        }
+        .back-link {
+            display: block;
+            margin-top: 20px;
+            text-align: center;
+            text-decoration: none;
+            color: #337ab7;
+        }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- <strong><h1> Oops!! You May Have</h1></strong> -->
+    <center><ul>
+      {% for disease in predicted_diseases %}
+        <li>{{ disease }}</li>
+      {% endfor %}
+    </ul>
+    <!-- <p>Please consult a doctor for furthur confirmation and treatment.</p> -->
+    </center>
+  </div>
+</body>
+</html>

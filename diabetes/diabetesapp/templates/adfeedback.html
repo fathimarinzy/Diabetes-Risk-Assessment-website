@@ -1,0 +1,221 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+<style>
+table, th, td {
+  border: 1px solid black;
+}
+</style>
+</head>
+<body>
+
+<h2>Table With Border</h2>
+
+<p>Use the CSS border property to add a border to the table.</p>
+
+<table style="width:100%">
+  <tr>
+    <th>Username</th>
+    <th>Contact</th>
+    <th>Email</th> 
+    <th>Message</th>
+    <th>Delete</th>
+  </tr>
+
+  {% for i in a %}
+  <tr>
+    <td>{{i.username}}</td>
+    <td>{{i.contact}}</td>
+    <td>{{i.mail}}</td>
+    <td>{{i.message}}</td>
+    <td><a href="feedremove/{{i.id}}/">Delete</a></td>
+  </tr>
+  {% endfor %}
+</table>
+
+
+</body>
+</html> -->
+<!-- <!DOCTYPE html>
+<html>
+<head>
+<style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  padding: 8px;
+}
+th {
+  background-color: #f2f2f2;
+}
+</style>
+</head>
+<body>
+
+<h2>Table With Border</h2>
+
+<p>Use the CSS border property to add a border to the table.</p>
+
+<table style="width:100%">
+  <tr>
+    <th>Username</th>
+    <th>Contact</th>
+    <th>Email</th> 
+    <th>Message</th>
+    <th>Delete</th>
+  </tr>
+
+  {% for item in a %}
+  <tr>
+    <td>{{ item.username }}</td>
+    <td>{{ item.contact }}</td>
+    <td>{{ item.mail }}</td>
+    <td>{{ item.message }}</td>
+    <td><a href="feedremove/{{ item.id }}/">Delete</a></td>
+  </tr>
+  {% endfor %}
+</table>
+
+
+</body>
+</html> -->
+<!-- <!DOCTYPE html>
+<html>
+<head>
+  <style>
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 20px; /* Add some spacing below the table */
+    }
+    th, td {
+      border: 1px solid black;
+      padding: 8px;
+      text-align: left; /* Align text to the left within cells */
+    }
+    th {
+      background-color: #f2f2f2;
+    }
+    td a {
+      text-decoration: none; /* Remove underline from delete links */
+      color: red; /* Change link color to red */
+    }
+    td a:hover {
+      text-decoration: underline; /* Underline link on hover */
+    }
+  </style>
+</head>
+<body>
+
+<h2>Table With Border</h2>
+
+<p>Use the CSS border property to add a border to the table.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Username</th>
+      <th>Contact</th>
+      <th>Email</th> 
+      <th>Message</th>
+      <th>Delete</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for item in a %}
+    <tr>
+      <td>{{ item.username }}</td>
+      <td>{{ item.contact }}</td>
+      <td>{{ item.mail }}</td>
+      <td>{{ item.message }}</td>
+      <td><a href="feedremove/{{ item.id }}">Delete</a></td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+</body>
+</html> -->
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      margin-bottom: 20px;
+    }
+  
+    th, td {
+      padding: 12px 15px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+      font-family: Arial, sans-serif;
+    }
+  
+    th {
+      background-color: #f2f2f2;
+      color: #333;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+  
+    td {
+      background-color: #fff;
+      color: #333;
+    }
+  
+    tbody tr:nth-child(even) {
+      background-color: #f9f9f9;
+    }
+  
+    tbody tr:hover {
+      background-color: #f5f5f5;
+    }
+  
+    td:last-child {
+      text-align: center;
+    }
+  
+    a {
+      color: #337ab7;
+      text-decoration: none;
+    }
+  
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+  
+</head>
+<body>
+
+
+<table>
+  <thead>
+    <tr>
+      <th>Username</th>
+      <th>Contact</th>
+      <th>Email</th> 
+      <th>Message</th>
+      <th>Delete</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for item in a %}
+    <tr>
+      <td>{{ item.username }}</td>
+      <td>{{ item.contact }}</td>
+      <td>{{ item.mail }}</td>
+      <td>{{ item.message }}</td>
+      <td><a href="/feedremove/{{item.id}}/"><button>Delete</button></a></td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+</body>
+</html>

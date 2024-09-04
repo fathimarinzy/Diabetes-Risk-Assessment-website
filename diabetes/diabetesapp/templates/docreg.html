@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .login-box {
+            width: 300px;
+            margin: 100px auto;
+            background: #fff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .login-box h2 {
+            margin: 0 0 20px;
+            padding: 0;
+            font-size: 24px;
+            color: #333;
+        }
+        .user-box {
+            position: relative;
+            margin-bottom: 25px;
+        }
+        .user-box input {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            color: #333;
+            border: none;
+            border-bottom: 1px solid #999;
+            outline: none;
+            background: transparent;
+        }
+        .user-box label {
+            position: absolute;
+            top: 0;
+            left: 0;
+            padding: 10px;
+            font-size: 16px;
+            color: #999;
+            pointer-events: none;
+            transition: .5s;
+        }
+        .user-box input:focus ~ label,
+        .user-box input:valid ~ label {
+            top: -20px;
+            font-size: 12px;
+            color: #333;
+        }
+        input[type="submit"] {
+            width: 100%;
+            background: #66e4e9;
+            border: none;
+            padding: 15px;
+            cursor: pointer;
+            font-size: 18px;
+            color: #fff;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+        }
+        input[type="submit"]:hover {
+            background: #66e4e9;
+        }
+        .login_link {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .login_link a {
+            color: #ec3d3d;
+            text-decoration: none;
+        }
+        .error-message {
+            color: #ec3d3d;
+            text-align: center;
+        }
+    </style>
+    </style>
+</head>
+<body>
+    <div class="login-box">
+        <Center><h2>Register</h2></Center>
+        <form action="/docreg/" method="POST">
+            {% csrf_token %}
+            <div class="user-box">
+                <input type="text" name="name" pattern="[A-Za-z]+" title="Please Enter a valid name(letters only)"  required>
+                <label>Doctor Name</label>
+            </div>
+              <div class="user-box">
+                <input type="text" name="qualification"   required>
+                <label>Qualification</label>
+              </div>
+              <div class="user-box">
+                <input type="text" name="department"   required>
+                <label>Department</label>
+              </div>
+              <div class="user-box">
+                <input type="text" name="hname"    required>
+                <label>Hospital Name</label>
+              </div>
+              <div class="user-box">
+                <input type="text" name="experience"   required>
+                <label>Experience</label>
+              </div>
+              <div class="user-box">
+                <input type="text" name="ctime"   required>
+                <label>Consulting Time</label>
+              </div>
+              <div class="user-box">
+                <input type="text" name="place"   required>
+                <label>Place</label>
+              </div><div class="user-box">
+                <input type="number" name="fee"   required>
+                <label>Fee</label>
+              </div>
+              <div class="user-box">
+                <input type="email" name="email"   required>
+                <label>Email</label>
+              </div>
+              <div class="user-box">
+                <input type="password" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"    required>
+                <label>Password</label>
+              </div>
+              <input type="submit" value="Register">
+              <div class="login_link">
+                <p>Already have an account? <a href="/doclog">Login</a></p>
+                {% if error_message %}
+                <p class="error-message">{{ error_message }}</p>{% endif %}
+              </div>
+
+            </form>
+            
+          
+          </div>
+          <script>
+            window.onscroll = function() {scrollFunction()};
+        
+            function scrollFunction() {
+                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                    document.getElementById("scrollBtn").style.display = "block";
+                } else {
+                    document.getElementById("scrollBtn").style.display = "none";
+                }
+            }
+        </script>
+    </body>
+    
+</html>

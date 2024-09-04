@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #E0F4FF;
+        }
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        h1 {
+            font-size: 24px;
+            color: #333;
+            text-align: center;
+        }
+        p {
+            font-size: 16px;
+            color: #333;
+            line-height: 1.5;
+        }
+        strong {
+            font-weight: bold;
+            
+        }
+        .alert {
+            margin-bottom: 20px;
+            padding: 10px;
+            background-color: #f2dede;
+            border: 1px solid #ebccd1;
+            color: #a94442;
+            border-radius: 5px;
+        }
+        .success {
+            margin-bottom: 20px;
+            padding: 10px;
+            background-color: #dff0d8;
+            border: 1px solid #d6e9c6;
+            color: #3c763d;
+            border-radius: 5px;
+        }
+        .back-link {
+            display: block;
+            margin-top: 20px;
+            text-align: center;
+            text-decoration: none;
+            color: #337ab7;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1></h1>
+        {% if has_diabetes %}
+            <div class="alert">
+                <strong>You have diabetes.
+                    <p>Please consult a doctor for a diagnosis and treatment.</p>
+                </strong>
+                <p>Here are some tips and remedies:</p>
+                <p>{{ tips_and_remedies }}</p>
+            </div>
+        {% else %}
+            <div class="success">
+                <strong>You do not have diabetes.
+                    <p>However, this is not a substitute for professional medical advice. It's important 
+                    to consult a doctor for a complete evaluation.</p>
+                </strong>
+            </div>
+        {% endif %}
+        <a href="/info" class="back-link">Want to test again ?</a>
+        <a href="/home" class="back-link">Back to Home</a>
+    </div>
+</body>
+</html>
